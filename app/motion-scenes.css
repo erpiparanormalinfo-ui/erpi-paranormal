@@ -41,3 +41,11 @@ html[data-room=igniting] .site-stage{animation:room-exposure 3.1s ease-out both}
 @media(max-height:570px){.real-light .entry-lamp{--fixture-scale:.62;transform-origin:50% 0}.real-light .entry-copy{margin-top:130px;padding:12px}.real-light .entry-copy h2{margin:12px 0;font-size:36px}.entry-options{margin-top:15px}}
 @media(prefers-reduced-motion:reduce){.real-light .entry-lamp{animation:none!important;transform:translateX(-50%) scale(var(--fixture-scale,1))!important}.light-cone,.darkroom-dust{display:none}.brand .neon-i{animation:none!important}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 html[data-motion=off] .real-light .entry-lamp{animation:none!important;transform:translateX(-50%) scale(var(--fixture-scale,1))!important}html[data-motion=off] .brand .neon-i{animation:none!important}
+/* Le focus est porté par l’objet, sans rectangle autour de la suspension. */
+.real-light .lamp-fixture{pointer-events:auto;cursor:pointer;outline:none}
+.real-light .lamp-fixture:focus-visible .lamp-shade{box-shadow:0 0 0 2px #cabd9a,0 0 26px #cabd9a44}
+.real-light .lamp-cord:focus-visible{outline:none}
+.real-light .lamp-cord:focus-visible>i{box-shadow:0 0 0 2px #cabd9a,0 0 18px #cabd9a66}
+.real-light .entry-options button{border:0;background:transparent;box-shadow:none}
+.real-light .entry-options button:focus-visible{outline:none;text-decoration:underline;text-underline-offset:6px}
+@keyframes suspension-release{0%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(0);opacity:1}9%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(7deg)}23%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(-5deg)}39%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(3deg)}56%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(-1.6deg);opacity:1}75%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(.6deg);opacity:.7}100%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(0);opacity:0}}
