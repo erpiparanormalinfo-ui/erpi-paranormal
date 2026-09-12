@@ -30,3 +30,7 @@ Les sources historiques sont liées dans les pages ERPI et Médias. Les offres, 
 - Les réglages et coordonnées fictives du checkout sont conservés dans le contexte React pendant la session.
 - Pictogrammes YouTube/TikTok : Simple Icons v16 (CC0), https://simpleicons.org/ ; marques utilisées uniquement pour identifier leurs liens.
 - Compte TikTok référencé publiquement : @erpi_paranormal (source TikBuddy). YouTube : https://www.youtube.com/@erpiparanormal9160, identifiant fourni par le propriétaire.
+
+## Refonte éditoriale
+La couverture et l’index des dossiers remplacent les cartes promotionnelles uniformes. Les pages partagent Barlow Condensed et Libre Franklin, distribuées localement avec leurs licences OFL. Le curseur suiveur et les animations de flou sont retirés. La lampe et le néon sont conservés.
+Repères consultés : Creative Bloq, « Everything looks the same. Now what? » (6 juin 2026) ; InterfaceKit, « What makes a website look AI-generated? ». Ce sont des analyses de conventions visuelles, pas des moyens de prouver qu’un site a été produit par IA.

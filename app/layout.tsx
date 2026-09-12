@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./fonts.css";
+import "./editorial-theme.css";
 import { SiteProvider } from "@/lib/erpi/site";
 
 export const metadata: Metadata = {
