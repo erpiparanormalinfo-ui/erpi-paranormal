@@ -46,3 +46,6 @@ Navigation regroupée en Découvrir ERPI, Les enquêtes, Participer et Boutique 
 - Les liens TikTok, sorties et nouveaux articles de presse sont publiés dans cet éditeur. La synchronisation TikTok n’est pas activée : elle demande une autorisation du compte via son API officielle. Le site n’effectue pas une veille automatique de tout internet.
 - Ouverture : masque animé révélant le vrai site, tirette manipulable, déclic audio optionnel, navigation clavier, échappement et réduction des mouvements. Le I du logo clignote par séquences espacées pendant la visite.
 - Scènes immersives réservées aux pages éditoriales ; lampe interactive dans les dossiers, transitions optiques, apparition du fantôme 404. Les formulaires et parcours commerciaux restent sobres. Toutes les flèches diagonales nord-est ont été supprimées.
+
+## Deuxième passe animations
+Suspension de laboratoire entièrement dessinée en CSS, tirette à seuil et retour souple, balancement amorti, éclairage progressif sur 3,1 secondes et poussières dans le faisceau. Raccords View Transitions sur les parcours éditoriaux, avec bascule immédiate pour les autres pages, les anciens navigateurs et la réduction des mouvements. Néon à contacts irréguliers. Référence technique : https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition

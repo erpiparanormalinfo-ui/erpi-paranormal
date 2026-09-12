@@ -1,0 +1,43 @@
+/* Une suspension de laboratoire : métal, porcelaine et lumière réelle. */
+.real-light .entry-lamp{width:220px;padding-top:0;animation:suspension-rest 5s ease-in-out infinite;transform-origin:50% 0}
+.lamp-fixture{height:164px;position:relative;width:220px;pointer-events:none}
+.lamp-wire{position:absolute;top:0;left:109px;width:3px;height:58px;background:linear-gradient(90deg,#070908,#3c4038,#090c09)}
+.lamp-socket{position:absolute;left:94px;top:52px;width:32px;height:33px;border-radius:8px 8px 2px 2px;background:repeating-linear-gradient(0deg,#141711 0 3px,#43473b 4px 5px);box-shadow:inset 5px 0 7px #0009}
+.lamp-shade{position:absolute;left:20px;top:74px;width:180px;height:65px;border-radius:90px 90px 12px 12px;background:linear-gradient(105deg,#131911 8%,#424b38 26%,#69705b 40%,#242d20 61%,#10170f 89%);box-shadow:inset 0 2px 1px #a7aa8255,0 8px 15px #000;z-index:2}
+.lamp-rim{position:absolute;bottom:-5px;left:-3px;width:186px;height:13px;border-radius:50%;background:radial-gradient(ellipse,#33382b 30%,#0b100b 68%,#70745e 76%,#171d13 86%);box-shadow:0 2px 2px #000}
+.lamp-bulb{position:absolute;top:126px;left:97px;width:26px;height:36px;background:radial-gradient(ellipse at 40% 30%,#a39d7f88,#454b3c55 60%,#a6a79155);border:1px solid #8f957f55;border-radius:40% 40% 48% 48%;z-index:3;transition:background .25s,box-shadow .35s}
+.lamp-bulb i{position:absolute;left:8px;top:10px;width:8px;height:14px;border:1px solid #93886b;border-top:0;border-radius:0 0 4px 4px}
+.lamp-halo{position:absolute;top:65px;left:-35px;width:290px;height:210px;background:radial-gradient(ellipse,#e5b97045,transparent 65%);opacity:0;filter:blur(14px)}
+.real-light .lamp-cord{position:absolute;left:147px;top:124px;margin:0;width:48px;height:calc(148px + var(--pull,0px));transform:none;transition:height .45s cubic-bezier(.2,1.7,.4,1);z-index:4}
+.real-light .lamp-cord>span{height:calc(108px + var(--pull,0px));width:2px;background:repeating-linear-gradient(0deg,#97896a 0 2px,#494637 2px 4px);transition:height .45s cubic-bezier(.2,1.7,.4,1)}
+.real-light .lamp-cord:active,.real-light .lamp-cord:active>span{transition:none}
+.real-light .lamp-cord>i{width:12px;height:29px;border:1px solid #b2a78988;border-radius:5px 5px 8px 8px;background:linear-gradient(90deg,#493f2b,#afa183 40%,#65553a);box-shadow:2px 3px 8px #000}
+.real-light .lamp-cord:focus-visible{outline:1px solid #cabd9a;outline-offset:7px}
+.real-light .entry-copy{margin-top:250px;max-width:550px}.real-light .entry-copy h2{font-size:clamp(40px,6vw,66px)}
+.real-light.is-lit .entry-lamp{animation:suspension-release 3.1s ease-out both;filter:none}
+.is-lit .lamp-bulb{background:#ffe8ae;box-shadow:0 0 16px 6px #facb7099,0 0 65px 15px #d59b4944}
+.is-lit .lamp-bulb i{border-color:#fff6d3;box-shadow:0 0 6px #fff6d3}.is-lit .lamp-halo{opacity:1;transition:opacity .35s}
+.light-cone{position:absolute;top:140px;left:50%;width:min(120vw,1500px);height:110vh;transform:translateX(-50%);clip-path:polygon(49% 0,51% 0,100% 100%,0 100%);background:linear-gradient(#d3b8871a,#d3b88705 55%,transparent);opacity:0;pointer-events:none}
+.is-lit .light-cone{animation:cone-breathe 3.1s ease both}.real-light .light-spill{background:radial-gradient(ellipse at 50% 18%,#ddbc7d38,transparent 72%)}
+.is-lit .blackout-curtain{animation:room-aperture-v2 3.1s cubic-bezier(.2,.55,.18,1) both;mask-image:radial-gradient(ellipse at 50% 18%,transparent 0,transparent max(0px,calc(var(--light-radius) - 230px)),#000 var(--light-radius))}
+html[data-room=igniting] .site-stage{animation:room-exposure 3.1s ease-out both}.is-lit .light-spill{animation:cone-breathe 3.1s ease both}.is-lit .entry-copy{animation:entry-withdraw .45s ease both}
+.darkroom-dust{position:absolute;inset:0;pointer-events:none;opacity:0}.is-lit .darkroom-dust{animation:dust-show 3.1s ease both}.darkroom-dust i{position:absolute;left:43%;top:30%;width:2px;height:2px;background:#e6d4a8;border-radius:50%;animation:dust-drift 6s linear infinite}.darkroom-dust i:nth-child(2n){left:59%;top:42%;animation-delay:-2s}.darkroom-dust i:nth-child(3n){left:38%;top:59%;animation-delay:-4s}.darkroom-dust i:nth-child(4n){left:65%;top:65%;animation-delay:-1s}
+@keyframes suspension-rest{0%,100%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(-.6deg)}50%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(.6deg)}}
+@keyframes suspension-release{0%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(0);opacity:1}12%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(3deg)}30%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(-1.8deg)}52%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(.8deg);opacity:1}75%{transform:translateX(-50%) scale(var(--fixture-scale,1)) rotate(-.3deg);opacity:.6}100%{transform:translateX(-50%) scale(var(--fixture-scale,1));opacity:0}}
+@keyframes room-aperture-v2{0%,7%{--light-radius:0px}22%{--light-radius:28vmax}48%{--light-radius:65vmax}100%{--light-radius:175vmax}}
+@keyframes room-exposure{0%,7%{filter:brightness(.02) sepia(.6)}24%{filter:brightness(.18) sepia(.45)}52%{filter:brightness(.65) sepia(.2)}82%,100%{filter:none}}
+@keyframes cone-breathe{0%,6%{opacity:0}22%,55%{opacity:1}100%{opacity:0}}
+@keyframes dust-show{0%,10%{opacity:0}30%,60%{opacity:.6}100%{opacity:0}}
+@keyframes dust-drift{to{transform:translate(24px,-55px)}}
+/* Raccord photographique entre contenus ; aucune bande ne traverse le texte. */
+.page-shutter{display:none!important}.sitehead{view-transition-name:erpi-header}main#main{view-transition-name:erpi-page}
+::view-transition-group(*){animation-duration:.6s}::view-transition-old(root),::view-transition-new(root),::view-transition-old(erpi-header),::view-transition-new(erpi-header){animation:none;mix-blend-mode:normal}
+::view-transition-old(erpi-page){animation:page-depart .26s ease-in both}::view-transition-new(erpi-page){animation:page-arrive .65s cubic-bezier(.18,.75,.25,1) both}
+@keyframes page-depart{to{opacity:0;filter:brightness(.65);transform:translateY(-8px)}}
+@keyframes page-arrive{from{opacity:0;filter:brightness(.7);transform:translateY(20px)}to{opacity:1;filter:none;transform:none}}
+.brand .neon-i{animation:neon-contact 12.7s step-end infinite!important}
+@keyframes neon-contact{0%,6%,6.9%,8%,36%,36.8%,71%,72%,100%{opacity:1;text-shadow:0 0 8px #d9663b88,0 0 19px #ac402e44}6.3%,7.4%,36.3%,71.3%{opacity:.22;text-shadow:none}7.7%,36.6%,71.7%{opacity:.6;text-shadow:0 0 3px #ce6747}}
+@media(max-width:600px){.real-light .entry-lamp{--fixture-scale:.86;transform-origin:50% 0}.real-light .entry-copy{margin-top:230px;padding:22px}.real-light .entry-copy h2{font-size:44px}.light-cone{top:120px}}
+@media(max-height:570px){.real-light .entry-lamp{--fixture-scale:.62;transform-origin:50% 0}.real-light .entry-copy{margin-top:130px;padding:12px}.real-light .entry-copy h2{margin:12px 0;font-size:36px}.entry-options{margin-top:15px}}
+@media(prefers-reduced-motion:reduce){.real-light .entry-lamp{animation:none!important;transform:translateX(-50%) scale(var(--fixture-scale,1))!important}.light-cone,.darkroom-dust{display:none}.brand .neon-i{animation:none!important}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+html[data-motion=off] .real-light .entry-lamp{animation:none!important;transform:translateX(-50%) scale(var(--fixture-scale,1))!important}html[data-motion=off] .brand .neon-i{animation:none!important}
