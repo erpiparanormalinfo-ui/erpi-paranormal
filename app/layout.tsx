@@ -5,6 +5,7 @@ import "./editorial-theme.css";
 import "./cinema.css";
 import "./newsroom.css";
 import "./motion-scenes.css";
+import "./home-scene.css";
 
 import { SiteProvider } from "@/lib/erpi/site";
 
