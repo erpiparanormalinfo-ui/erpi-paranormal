@@ -3,6 +3,7 @@ import "./globals.css";
 import "./fonts.css";
 import "./editorial-theme.css";
 import "./cinema.css";
+import "./newsroom.css";
 
 import { SiteProvider } from "@/lib/erpi/site";
 
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="antialiased"><SiteProvider>{children}</SiteProvider></body>
+      <body className="antialiased"><script dangerouslySetInnerHTML={{__html:"try{if(location.pathname==='/'&&!sessionStorage.getItem('erpi-entered')&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&localStorage.getItem('erpi-motion')!=='off')document.documentElement.dataset.room='dark'}catch(e){}"}}/><SiteProvider>{children}</SiteProvider></body>
     </html>
   );
 }

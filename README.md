@@ -4,7 +4,7 @@ Version navigable de travail : univers chambre noire, catalogues, signalement pr
 
 ## Fonctionnement
 
-Les données de test sont conservées dans la mémoire de l’onglet. Aucun paiement, email, upload réel ou authentification applicative n’est actif. La diffusion Sites reste privée.
+Les parcours commerciaux, signalements et comptes clients restent des démonstrations en mémoire : aucun paiement, email ou upload réel. Seules les annonces de l’accueil disposent désormais d’un stockage D1 et d’un accès éditeur protégé par la connexion Sites/ChatGPT. La diffusion Sites reste privée.
 
 - `npm run dev` : aperçu local.
 - `npm run build` : construction du Worker.
@@ -38,3 +38,11 @@ Repères consultés : Creative Bloq, « Everything looks the same. Now what? » 
 
 ## Parcours et audit responsive — septembre 2026
 Navigation regroupée en Découvrir ERPI, Les enquêtes, Participer et Boutique ; les rubriques secondaires restent dans les menus et le plan du site. Nouvelle page /participer, entrée unique /interventions pour signalement ou rendez-vous. Accueil photographique organisé en découverte, expérience, puis équipement ; réseaux sociaux et presse servent de références. Réutilisation des illustrations existantes avec mention explicite. Les styles cinema.css corrigent les colonnes, titres longs, champs, menus et petits écrans ; mouvements désactivables. Audit navigateur des 38 routes publiques à 320 px et 1055 px, et des principales pages à 390 px et 768 px ; menus mobile/ordinateur et FAQ ouverte contrôlés.
+
+
+## Fil d’actualités et mise en lumière
+- Accueil : annonces publiées, puis flux YouTube officiel (Atom), sorties et références de presse. Les dates originales sont conservées ; aucune archive n’est présentée comme une nouveauté. Cache D1 de cinq minutes, rafraîchissement du navigateur toutes les minutes actives, copie vérifiée de secours.
+- `/admin/annonces` : création, modification, brouillon, programmation, expiration, épinglage et archivage. Autorisation serveur par compte ChatGPT vérifié et variable Sites `ERPI_EDITOR_EMAIL`. Variable locale de test dans `.dev.vars`, jamais versionnée. Migration `drizzle/0000_bent_tony_stark.sql`, sans données de démonstration.
+- Les liens TikTok, sorties et nouveaux articles de presse sont publiés dans cet éditeur. La synchronisation TikTok n’est pas activée : elle demande une autorisation du compte via son API officielle. Le site n’effectue pas une veille automatique de tout internet.
+- Ouverture : masque animé révélant le vrai site, tirette manipulable, déclic audio optionnel, navigation clavier, échappement et réduction des mouvements. Le I du logo clignote par séquences espacées pendant la visite.
+- Scènes immersives réservées aux pages éditoriales ; lampe interactive dans les dossiers, transitions optiques, apparition du fantôme 404. Les formulaires et parcours commerciaux restent sobres. Toutes les flèches diagonales nord-est ont été supprimées.

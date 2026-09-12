@@ -1,0 +1,4 @@
+import {newsDb,selectNews,youtubeNews} from '@/lib/erpi/news-server';
+import {pressFallback,visibleNews,type NewsItem} from '@/lib/erpi/news-data';
+export const dynamic='force-dynamic';
+export async function GET(){const feedPromise=youtubeNews();let editorial:NewsItem[]=[];let editorialAvailable=true;try{const now=new Date().toISOString();const r=await newsDb().prepare(selectNews+' WHERE status = ? AND published_at <= ? AND (expires_at IS NULL OR expires_at > ?) ORDER BY pinned DESC,published_at DESC LIMIT 100').bind('published',now,now).all<NewsItem>();editorial=r.results;}catch{editorialAvailable=false;}const feed=await feedPromise;const items=visibleNews([...editorial,...feed.items,...pressFallback]);const unique=items.filter((item,i)=>items.findIndex(x=>x.url===item.url)===i);return Response.json({items:unique,youtube:feed.state,checkedAt:feed.checkedAt,editorialAvailable,tiktok:'editorial'},{headers:{'Cache-Control':'no-store'}});}
