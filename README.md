@@ -29,4 +29,4 @@ Les sources historiques sont liées dans les pages ERPI et Médias. Les offres, 
 - Deux cours originaux de cinq modules, cinq articles, exercices et corrigés. Progression et notes de cours uniquement locales au navigateur, clé versionnée erpi-course-v1-*. Contenu proposé à la validation éditoriale ERPI, aucun certificat professionnel.
 - Les réglages et coordonnées fictives du checkout sont conservés dans le contexte React pendant la session.
 - Pictogrammes YouTube/TikTok : Simple Icons v16 (CC0), https://simpleicons.org/ ; marques utilisées uniquement pour identifier leurs liens.
-- Compte TikTok référencé publiquement : @erpi_paranormal (source TikBuddy). L’adresse officielle YouTube n’est pas vérifiée : lien explicitement libellé comme recherche.
+- Compte TikTok référencé publiquement : @erpi_paranormal (source TikBuddy). YouTube : https://www.youtube.com/@erpiparanormal9160, identifiant fourni par le propriétaire.
