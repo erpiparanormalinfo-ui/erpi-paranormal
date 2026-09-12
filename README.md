@@ -34,3 +34,7 @@ Les sources historiques sont liées dans les pages ERPI et Médias. Les offres, 
 ## Refonte éditoriale
 La couverture et l’index des dossiers remplacent les cartes promotionnelles uniformes. Les pages partagent Barlow Condensed et Libre Franklin, distribuées localement avec leurs licences OFL. Le curseur suiveur et les animations de flou sont retirés. La lampe et le néon sont conservés.
 Repères consultés : Creative Bloq, « Everything looks the same. Now what? » (6 juin 2026) ; InterfaceKit, « What makes a website look AI-generated? ». Ce sont des analyses de conventions visuelles, pas des moyens de prouver qu’un site a été produit par IA.
+
+
+## Parcours et audit responsive — septembre 2026
+Navigation regroupée en Découvrir ERPI, Les enquêtes, Participer et Boutique ; les rubriques secondaires restent dans les menus et le plan du site. Nouvelle page /participer, entrée unique /interventions pour signalement ou rendez-vous. Accueil photographique organisé en découverte, expérience, puis équipement ; réseaux sociaux et presse servent de références. Réutilisation des illustrations existantes avec mention explicite. Les styles cinema.css corrigent les colonnes, titres longs, champs, menus et petits écrans ; mouvements désactivables. Audit navigateur des 38 routes publiques à 320 px et 1055 px, et des principales pages à 390 px et 768 px ; menus mobile/ordinateur et FAQ ouverte contrôlés.
