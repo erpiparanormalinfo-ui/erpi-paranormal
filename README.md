@@ -23,3 +23,10 @@ Le plan des phases et les dépendances sont consultables sur `/admin/architectur
 Le décor `public/darkroom.png` est une illustration originale générée avec image_gen : chambre noire et cabinet d’archives sous lumière rouge, appareil photo, enregistreur et tirage dans un bac. Ce décor ne représente pas un lieu réel ERPI.
 
 Les sources historiques sont liées dans les pages ERPI et Médias. Les offres, lieux, tarifs, biographies actuelles et conditions légales doivent être validés avant activation des services réels.
+
+## Edition chambre noire — septembre 2026
+- Expérience d’entrée à tirette, rejouable en pied de page ; animations limitées par prefers-reduced-motion et le réglage du site.
+- Deux cours originaux de cinq modules, cinq articles, exercices et corrigés. Progression et notes de cours uniquement locales au navigateur, clé versionnée erpi-course-v1-*. Contenu proposé à la validation éditoriale ERPI, aucun certificat professionnel.
+- Les réglages et coordonnées fictives du checkout sont conservés dans le contexte React pendant la session.
+- Pictogrammes YouTube/TikTok : Simple Icons v16 (CC0), https://simpleicons.org/ ; marques utilisées uniquement pour identifier leurs liens.
+- Compte TikTok référencé publiquement : @erpi_paranormal (source TikBuddy). L’adresse officielle YouTube n’est pas vérifiée : lien explicitement libellé comme recherche.
