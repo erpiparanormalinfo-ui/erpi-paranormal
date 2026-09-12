@@ -9,7 +9,7 @@ const traces:Record<string,{id:string;label:string;word:string;note:string}>={
  '/carte':{id:'05',label:'Point hors carte',word:'NULLE PART',note:'Le lieu n’existe pas. Certaines pistes ne mènent qu’à une histoire.'},
  '/erpi':{id:'06',label:'Trois impulsions',word:'S',note:'Trois points en morse : S. Le silence fait aussi partie du message.'}
 };
-export function ArgTraces(){const path=usePathname();if(!traces[path])return null;return <Trace key={path} path={path}/>}
+export function ArgTraces(){const path=usePathname();const[ready,Ready]=useState(false);useEffect(()=>Ready(true),[]);if(!ready||!traces[path])return null;return <Trace key={path} path={path}/>}
 function Trace({path}:{path:string}){
  const item=traces[path];const[awake,Awake]=useState(false);const[count,Count]=useState(0);const[found,Found]=useState(false);const[tune,Tune]=useState(82);const[answer,Answer]=useState('');const[code,Code]=useState('');const[solved,Solved]=useState(false);const[feedback,Feedback]=useState('');const[collection,Collection]=useState<string[]>([]);const dialog=useRef<HTMLDialogElement>(null);
  useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem('erpi-arg-fragments')||'[]');if(Array.isArray(saved)){const valid=saved.filter((x:unknown)=>typeof x==='string'&&Object.values(traces).some(t=>t.id===x));Collection(valid);Found(valid.includes(item.id))}}catch{}},[item.id]);
