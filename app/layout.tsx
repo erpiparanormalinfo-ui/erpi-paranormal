@@ -8,6 +8,7 @@ import "./motion-scenes.css";
 import "./home-scene.css";
 import "./arg.css";
 import "./workflows.css";
+import "./ecosystem.css";
 
 import { SiteProvider } from "@/lib/erpi/site";
 

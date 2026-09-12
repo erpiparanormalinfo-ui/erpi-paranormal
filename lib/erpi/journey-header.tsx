@@ -3,10 +3,10 @@ import {useCallback,useEffect,useRef,useState} from 'react';
 import {Menu,X,Search,ShoppingBag,UserRound,ChevronDown} from 'lucide-react';
 import Link,{usePathname} from './navigation';
 const groups=[
- {name:'Découvrir ERPI',intro:'L’entreprise, la méthode, les récits.',links:[['ERPI & sa méthode','/erpi'],['Vidéos','/videos'],['Le journal','/actualites'],['Médias','/medias']]},
- {name:'Les enquêtes',intro:'Observer et comprendre.',links:[['Consulter les dossiers','/dossiers'],['Carte des enquêtes','/carte'],['Ressources','/academie']]},
+ {name:'Découvrir ERPI',intro:'L’entreprise, la méthode, les récits.',links:[['ERPI & sa méthode','/erpi'],['Vidéos','/videos'],['Le journal','/actualites'],['Médias','/medias'],['Soutenir ERPI','/soutenir']]},
+ {name:'Les enquêtes',intro:'Observer et comprendre.',links:[['Consulter les dossiers','/dossiers'],['Carte des enquêtes','/carte'],['Ressources','/academie'],['Applications ERPI','/applications']]},
  {name:'Contacter l’équipe',intro:'Un premier échange.',links:[['Un phénomène chez vous ?','/interventions'],['Prendre rendez-vous','/rendez-vous'],['Contacter ERPI','/contact'],['Presse & professionnels','/contact/professionnel']]}
- ,{name:'Boutique',intro:'Équipement et expériences.',links:[['Le matériel','/boutique'],['Les kits ERPI','/kits'],['Sorties & rencontres','/evenements'],['Formations','/formations']]}
+ ,{name:'Boutique',intro:'Équipement et expériences.',links:[['Le matériel','/boutique'],['Les kits ERPI','/kits'],['ERPI Studio · Mac & Windows','/applications/studio'],['Sorties & rencontres','/evenements'],['Formations','/formations']]}
 ];
 export function JourneyHeader({cartCount}:{cartCount:number}){
  const path=usePathname();const[mobile,Mobile]=useState(false);const root=useRef<HTMLElement>(null);

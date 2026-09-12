@@ -48,6 +48,8 @@ S(41,'Automatisations','/admin/automatisations','Administration','Lancement',['N
 S(42,'Analytics','/admin/analytics','Administration','Lancement',['Statistiques','Consentements'],'Trafic, sources, pages vues, clics et vidéos|Formulaires commencés et terminés|Réservations et conversion|Remplissage|Newsletter','Panier, ventes, panier moyen et revenus par levier','Membres payants et rétention'),
 S(43,'SEO','/admin/seo','Administration','Lancement',['Contenus','Recherche'],'URLs propres et métadonnées|Sitemap|Données structurées pertinentes|Dossiers, événements et articles|Images optimisées et partage réseaux','Produits|Pages locales avec contenu réel'),
 S(44,'Sécurité / confidentialité','/admin/securite','Administration','Lancement',['Identité','Rôles','Sauvegardes'],'Consentements et bases de traitement documentés|Signalements sensibles et dossiers privés protégés|Rôles|Sauvegardes restaurables|Anti-spam et protection formulaires|Journal admin|Suppression / anonymisation sur demande'),
+S(46,'Applications ERPI','/applications','Explorer','Phase 2',['Contenu'],'ERPI Companion iOS|ERPI Studio Mac et Windows|Aperçus interactifs'),
+S(47,'Soutenir ERPI','/soutenir','Explorer','Phase 2',['Paiement'],'Montant libre|Stripe|PayPal'),
 S(45,'Rôles utilisateurs','/admin/roles','Administration','Lancement',['Identité'],'Visiteur|Participant événement|Témoin déclarant|Enquêteur ERPI|Rédacteur|Administrateur','Client boutique|Responsable boutique','Membre premium')
 ];
 export const statuses=['En préparation','Investigation prévue','En cours','Analyse en cours','Explication trouvée','Explication probable','Indéterminé','Classé'];
