@@ -1,13 +1,13 @@
 'use client';
 import Link from './navigation';
 import {Newsroom} from './newsroom';
-import {HomeScene} from './home-scene';
+import {OfficeJourney} from './office-journey';
 import {StudioVisual} from './ecosystem';
 import {ProductVisual} from './product-visual';
 import {articles} from './editorial-data';
 export function EditorialHome(){return <div className="cinema-home">
-<HomeScene/><nav className="home-public-paths" aria-label="Commencer la visite"><Link href="/erpi">Découvrir ERPI</Link><Link href="/dossiers">Consulter les enquêtes</Link><Link href="/interventions">Un phénomène chez vous ?</Link></nav>
-<Newsroom/>
+<OfficeJourney/><nav className="home-public-paths" aria-label="Commencer la visite"><Link href="/erpi">Découvrir ERPI</Link><Link href="/dossiers">Consulter les enquêtes</Link><Link href="/interventions">Un phénomène chez vous ?</Link></nav>
+<div id="home-news"><Newsroom/></div>
 <section className="home-method"><p className="chapter-label">L’ESPRIT DE L’ENQUÊTE</p><h2>Prendre les témoignages au sérieux.<br/><em>Garder l’esprit critique.</em></h2><div><p>Écouter, observer, confronter les hypothèses. Explorer l’inexpliqué demande de la curiosité, mais aussi du recul.</p><Link className="editorial-link" href="/erpi">Découvrir notre démarche →</Link></div></section>
 
 <section className="cinema-journal"><div><p className="chapter-label">LE JOURNAL DE L’ENQUÊTEUR</p><h2>Avant de tirer<br/>des conclusions.</h2><Link className="editorial-link" href="/actualites">Lire le journal <span>→</span></Link></div><div className="journal-notes">{articles.slice(0,2).map(a=><Link href={'/actualites/'+a.id} key={a.id}><p className="chapter-label">{a.category}</p><h3>{a.title}</h3><p>{a.intro}</p><span className="subtle-link">Lire l’article →</span></Link>)}</div></section>
