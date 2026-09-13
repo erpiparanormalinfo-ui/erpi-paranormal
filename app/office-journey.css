@@ -14,3 +14,11 @@
 @media(prefers-reduced-motion:reduce){.office-journey *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 html[data-motion=off] .office-journey *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 @media(min-width:850px){.office-chapter:nth-child(3),.office-chapter:nth-child(5){justify-content:flex-end}.office-chapter:nth-child(3) .office-copy,.office-chapter:nth-child(5) .office-copy{width:min(610px,56%)}.office-journey[data-shot='2'] .office-shade,.office-journey[data-shot='4'] .office-shade{background:linear-gradient(270deg,#0b0a08ef 0%,#0b0a08c4 40%,#0b0a0810 80%),linear-gradient(0deg,#080807cc,transparent 32%)}.office-chapter:nth-child(3):before,.office-chapter:nth-child(5):before{background:linear-gradient(270deg,#090908ed,#090908a6 50%,#09090820)}}
+
+/* Real WebGL world; HTML remains the accessible navigation layer. */
+.office-world{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}
+.office-world canvas{display:block;width:100%;height:100%}
+.office-journey[data-world=ready] .office-world{opacity:1}
+.office-journey[data-world=ready] .office-camera,.office-journey[data-world=ready] .office-halo,.office-journey[data-world=ready] .office-dust{display:none}
+.office-journey[data-world=ready] .office-shade{background:linear-gradient(90deg,#0b0a08cc 0%,#0b0a0870 32%,transparent 65%),linear-gradient(0deg,#080807a0,transparent 24%)}
+.office-journey[data-world=ready][data-shot='2'] .office-shade,.office-journey[data-world=ready][data-shot='4'] .office-shade{background:linear-gradient(270deg,#0b0a08cc,#0b0a0870 32%,transparent 65%),linear-gradient(0deg,#080807a0,transparent 24%)}
