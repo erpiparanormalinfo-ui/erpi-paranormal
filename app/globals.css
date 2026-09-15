@@ -145,3 +145,6 @@ button:disabled{opacity:.45;cursor:not-allowed}
 #main:focus{outline:none}.pillnav button[aria-pressed=true]{background:#3a261e;border-color:#c28361;color:#f5d0af}.article-meta{flex-wrap:wrap}.social-card{min-width:0}.social-card h3{overflow-wrap:anywhere}.course-nav,.lesson{min-width:0}.lesson-actions{flex-wrap:wrap}.entry-copy .eyebrow{font-size:12px}.sitefoot .textlink{margin-top:0;font-weight:400}
 .course-image{margin:0 0 24px;overflow:hidden;border:1px solid #55483a;background:#161310}.course-image img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;transition:transform 1s ease}.journal-card:hover .course-image img{transform:scale(1.025)}.course-image figcaption{font:10px monospace;letter-spacing:1.3px;padding:10px 14px;color:#a99075}.journal-body>.course-image{margin-bottom:35px}.lesson .course-image img{max-height:290px;object-fit:cover}
 @media(prefers-reduced-motion:reduce){.course-image img{transition:none}}
+
+/* Shared charter tokens; detailed typography in brand-charter.css. */
+:root{--background:#0D0D0C;--foreground:#F2EFE9;--card:#141413;--muted-foreground:#A8A59C;--primary:#FF3B45;--primary-foreground:#0D0D0C}

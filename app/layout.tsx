@@ -10,6 +10,8 @@ import "./arg.css";
 import "./workflows.css";
 import "./ecosystem.css";
 import "./office-journey.css";
+import "./charter-fonts.css";
+import "./brand-charter.css";
 
 import { SiteProvider } from "@/lib/erpi/site";
 

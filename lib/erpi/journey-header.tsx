@@ -3,10 +3,10 @@ import {useCallback,useEffect,useRef,useState} from 'react';
 import {Menu,X,Search,ShoppingBag,UserRound,ChevronDown} from 'lucide-react';
 import Link,{usePathname} from './navigation';
 const groups=[
- {name:'Découvrir ERPI',intro:'L’entreprise, la méthode, les récits.',links:[['ERPI & sa méthode','/erpi'],['Vidéos','/videos'],['Le journal','/actualites'],['Médias','/medias'],['Soutenir ERPI','/soutenir']]},
- {name:'Les enquêtes',intro:'Observer et comprendre.',links:[['Consulter les dossiers','/dossiers'],['Carte des enquêtes','/carte'],['Ressources','/academie'],['Applications ERPI','/applications']]},
- {name:'Contacter l’équipe',intro:'Un premier échange.',links:[['Un phénomène chez vous ?','/interventions'],['Prendre rendez-vous','/rendez-vous'],['Contacter ERPI','/contact'],['Presse & professionnels','/contact/professionnel']]}
- ,{name:'Boutique',intro:'Équipement et expériences.',links:[['Le matériel','/boutique'],['Les kits ERPI','/kits'],['ERPI Studio · Mac & Windows','/applications/studio'],['Sorties & rencontres','/evenements'],['Formations','/formations']]}
+ {name:'ERPI Paranormal',intro:'Les enquêtes, l’équipe et ses publications.',links:[['ERPI & sa méthode','/erpi'],['Dossiers d’enquête','/dossiers'],['Carte des enquêtes','/carte'],['Vidéos · YouTube & TikTok','/videos'],['Le journal','/actualites'],['Dans les médias','/medias']]},
+ {name:'Faire appel à ERPI',intro:'Du premier échange à l’intervention.',links:[['Prendre rendez-vous','/rendez-vous'],['Un phénomène chez vous ?','/interventions'],['Signaler un phénomène','/signaler'],['Lieux & professionnels','/professionnels'],['Contacter l’équipe','/contact']]},
+ {name:'Communauté',intro:'Se rencontrer et apprendre.',links:[['La communauté ERPI','/communaute'],['Formations','/formations'],['Sorties & rencontres','/evenements'],['Guides gratuits','/academie'],['Urbex & nature','/urbex']]},
+ {name:'Boutique & outils',intro:'S’équiper sur le terrain et organiser ses observations.',links:[['La boutique','/boutique'],['Guide du matériel','/materiel'],['Applications ERPI','/applications']]}
 ];
 export function JourneyHeader({cartCount}:{cartCount:number}){
  const path=usePathname();const[mobile,Mobile]=useState(false);const root=useRef<HTMLElement>(null);
